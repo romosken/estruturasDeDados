@@ -1,4 +1,4 @@
-package data.structures;
+package data.structures.interfaces;
 
 public interface Busca<T extends Comparable<T>> {
 

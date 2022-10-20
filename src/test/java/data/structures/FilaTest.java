@@ -1,4 +1,6 @@
 package data.structures;
+import data.structures.implementations.FilaImpl;
+import data.structures.interfaces.Fila;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

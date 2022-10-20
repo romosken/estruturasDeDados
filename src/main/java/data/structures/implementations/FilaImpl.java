@@ -1,5 +1,7 @@
-package data.structures;
+package data.structures.implementations;
 
+
+import data.structures.interfaces.Fila;
 
 public class FilaImpl<T> implements Fila<T> {
 

@@ -1,4 +1,6 @@
-package data.structures;
+package data.structures.implementations;
+
+import data.structures.interfaces.Pilha;
 
 public class PilhaImpl<T> implements Pilha<T> {
 

@@ -1,4 +1,4 @@
-package data.structures;
+package data.structures.interfaces;
 
 public interface Sortable<T extends Comparable<T>> {
 

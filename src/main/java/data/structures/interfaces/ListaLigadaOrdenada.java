@@ -1,4 +1,4 @@
-package data.structures;
+package data.structures.interfaces;
 
 public interface ListaLigadaOrdenada<T extends Comparable<T>> {
 
