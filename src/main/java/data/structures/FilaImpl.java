@@ -11,56 +11,56 @@ public class FilaImpl<T> implements Fila<T> {
         if (size <= 0)
             throw new RuntimeException("Tamanho inválido!");
 
-        this.elementos = (T[]) new Object[size];
-        this.proximo = this.ultimo = -1;
+        elementos = (T[]) new Object[size];
+        proximo = ultimo = -1;
     }
 
 
     @Override
     public void enqueue(T data) {
-        if (this.isFull())
+        if (isFull())
             throw new RuntimeException("A fila está cheia!");
 
-        if (this.isEmpty())
-            this.proximo++;
+        if (isEmpty())
+            proximo++;
 
-        if (this.ultimo == this.size() - 1) {
-            this.ultimo = -1;
+        if (ultimo == size() - 1) {
+            ultimo = -1;
         }
 
-        this.elementos[++ultimo] = data;
+        elementos[++ultimo] = data;
     }
 
     @Override
     public T dequeue() {
-        if (this.isEmpty())
+        if (isEmpty())
             throw new RuntimeException("A fila está vazia!");
 
-        var retorno = this.elementos[this.proximo];
-        this.elementos[this.proximo] = null;
+        var retorno = elementos[proximo];
+        elementos[proximo] = null;
 
-        if (this.proximo == this.ultimo) {
-            this.proximo = this.ultimo = -1;
+        if (proximo == ultimo) {
+            proximo = ultimo = -1;
             return retorno;
         }
 
-        if (this.proximo == this.size() - 1) {
-            this.proximo = 0;
+        if (proximo == size() - 1) {
+            proximo = 0;
             return retorno;
         }
 
-        this.proximo++;
+        proximo++;
         return retorno;
     }
 
     @Override
     public T front() {
-        if (this.isEmpty())
+        if (isEmpty())
             return null;
         return elementos[proximo];
     }
     public T rear() {
-        if (this.isEmpty())
+        if (isEmpty())
             return null;
         return elementos[ultimo];
     }
@@ -88,10 +88,5 @@ public class FilaImpl<T> implements Fila<T> {
     public int getIndexRear() {
         return ultimo;
     }
-
-
-
-    public static void main(String[] args) {
-        System.out.println(6 % 5);
-    }
+    
 }

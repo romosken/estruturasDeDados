@@ -8,8 +8,9 @@ public class PilhaImpl<T> implements Pilha<T> {
     public PilhaImpl(int size) {
         if (size <= 0)
             throw new RuntimeException("Tamanho invalido: " + size);
-        this.elements = (T[]) new Object[size];
-        this.pos = -1;
+
+        elements = (T[]) new Object[size];
+        pos = -1;
     }
 
     @Override
@@ -28,9 +29,9 @@ public class PilhaImpl<T> implements Pilha<T> {
 
     @Override
     public T top() {
-        if (!isEmpty())
-            return elements[pos];
-        return null;
+        if (isEmpty())
+            return null;
+        return elements[pos];
     }
 
     @Override
