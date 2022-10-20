@@ -8,9 +8,16 @@ public interface Fila<T> {
 
     T front();
 
-    T size();
+    T rear();
+
+    int size();
 
     boolean isEmpty();
 
     boolean isFull();
+
+    int getIndexFront();
+
+    int getIndexRear();
+
 }

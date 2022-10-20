@@ -3,7 +3,7 @@ package data.structures;
 public interface ArvoreDeBuscaBinaria<T extends Comparable<T>> {
 
 
-    void inserir(T data);
+    void insert(T data);
 
     boolean exists(T dada);
 
