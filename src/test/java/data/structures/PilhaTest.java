@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -98,7 +99,6 @@ class PilhaTest {
         assertThat(pilhaToBeUsed.isEmpty()).isEqualTo(expectedEmpty);
         assertThat(pilhaToBeUsed.isFull()).isFalse();
     }
-
     static Stream<Arguments> popArguments() {
         int elementOne = random();
         int elementTwo = random();

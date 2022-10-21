@@ -5,7 +5,7 @@ public interface ArvoreDeBuscaBinaria<T extends Comparable<T>> {
 
     void insert(T data);
 
-    boolean exists(T dada);
+    boolean exists(T data);
 
     ArvoreDeBuscaBinaria<T> retrieve(T data);
 

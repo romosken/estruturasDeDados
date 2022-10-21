@@ -26,9 +26,8 @@ public class FilaImpl<T> implements Fila<T> {
         if (isEmpty())
             proximo++;
 
-        if (ultimo == size() - 1) {
+        if (ultimo == size() - 1)
             ultimo = -1;
-        }
 
         elementos[++ultimo] = data;
     }
